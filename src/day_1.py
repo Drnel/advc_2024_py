@@ -1,6 +1,7 @@
 def main():
+    print("\n-----Solving advent of code 2024 day 1-----\n")
     file = open("input_texts/day_1.txt", "r")
-    lines = file.readlines()
+    lines = file.read().split("\n")
     file.close()
     l1 = []
     l2 = []
@@ -15,14 +16,14 @@ def main():
     for i in range(len(l1)):
         total += abs(l1[i] - l2[i])
     
-    print(f"\npart 1 total difference: | {total} | \n");
+    print(f"part 1 total difference: | {total} | \n");
 
     similarity_score = 0
 
     for num in l1:
         similarity_score += (num * (l2.count(num)))
     
-    print(f"\npart 2 similarity score: | {similarity_score} | \n");
+    print(f"part 2 similarity score: | {similarity_score} | \n");
 
 
 main()
